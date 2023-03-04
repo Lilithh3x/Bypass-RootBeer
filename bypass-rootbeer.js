@@ -88,13 +88,3 @@ Java.perform(() => {
 
 
 });
-
-Interceptor.attach(Module.findExportByName(null, "dlopen"), {
-    onEnter: function (args) {
-        var path = Memory.readUtf8String(args[0]);
-        
-        path = Memory.readUtf8String(args[0]);
-        send(`Abrindo arquivo ${path}`);
-    }    
-
-});
